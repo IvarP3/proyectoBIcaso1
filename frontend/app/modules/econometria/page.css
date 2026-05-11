@@ -1,0 +1,450 @@
+.econometria-page {
+  min-height: 100vh;
+  padding: 1.2rem 1.4rem 1.8rem;
+  background:
+    radial-gradient(circle at 12% 15%, rgba(28, 113, 216, 0.17), transparent 30%),
+    radial-gradient(circle at 90% 12%, rgba(6, 182, 212, 0.18), transparent 32%),
+    linear-gradient(160deg, #0c1828 0%, #12233a 54%, #13293f 100%);
+  color: #e5edf6;
+}
+
+.hero-card {
+  border: 1px solid rgba(160, 197, 232, 0.25);
+  border-radius: 16px;
+  padding: 1.2rem 1.2rem 1rem;
+  background: linear-gradient(145deg, rgba(17, 60, 103, 0.45) 0%, rgba(28, 87, 124, 0.32) 100%);
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8db6dd;
+  font-weight: 700;
+}
+
+.hero-card h1 {
+  margin: 0.4rem 0 0.6rem;
+  font-size: 1.95rem;
+  line-height: 1.18;
+}
+
+.hero-card p {
+  margin: 0;
+  max-width: 880px;
+  color: #cde0f4;
+}
+
+.tabs-shell {
+  margin-top: 0.9rem;
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  border: 1px solid rgba(165, 201, 233, 0.28);
+  border-radius: 999px;
+  background: rgba(9, 28, 45, 0.85);
+  color: #cbe4fb;
+  padding: 0.52rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.86rem;
+}
+
+.tab-btn.active {
+  background: linear-gradient(145deg, #1d72d8 0%, #14549a 100%);
+  border-color: rgba(108, 174, 236, 0.8);
+  color: #fff;
+}
+
+.panel-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: minmax(340px, 1fr) minmax(340px, 1fr);
+  gap: 1rem;
+}
+
+.panel-card {
+  border: 1px solid rgba(166, 200, 232, 0.2);
+  border-radius: 14px;
+  padding: 1rem;
+  background: linear-gradient(145deg, rgba(14, 35, 59, 0.88) 0%, rgba(18, 49, 72, 0.72) 100%);
+}
+
+.panel-card h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.panel-card p {
+  line-height: 1.5;
+}
+
+.panel-card.chart-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.formula-card {
+  display: grid;
+  gap: 0.72rem;
+}
+
+.formula-box {
+  border: 1px solid rgba(157, 190, 225, 0.2);
+  border-radius: 12px;
+  padding: 0.75rem 0.8rem;
+  background: rgba(3, 13, 22, 0.88);
+  overflow-x: auto;
+}
+
+.formula-box .katex-display {
+  margin: 0;
+}
+
+.formula-box .katex {
+  color: #e6f2ff;
+  font-size: 1.05rem;
+}
+
+.panel-card.chart-card::after {
+  content: '';
+  position: absolute;
+  inset: auto -18% -22% auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(45, 132, 226, 0.22) 0%, rgba(45, 132, 226, 0) 70%);
+  pointer-events: none;
+}
+
+.sub-title {
+  margin: 0.8rem 0 0.4rem;
+  font-size: 0.95rem;
+  color: #cde4fa;
+}
+
+.chart-card {
+  min-height: 320px;
+}
+
+.filters-card {
+  margin-top: 1rem;
+}
+
+.filters-grid {
+  margin-top: 0.6rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 0.55rem;
+}
+
+.filters-grid label {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.86rem;
+  color: #bad5f0;
+}
+
+.filters-grid select,
+.filters-grid input {
+  border-radius: 8px;
+  border: 1px solid rgba(157, 190, 225, 0.35);
+  background: rgba(8, 21, 34, 0.88);
+  color: #ebf4fc;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.55rem;
+}
+
+.reload-btn {
+  margin-top: 0.65rem;
+  border-radius: 9px;
+  border: 1px solid rgba(157, 190, 225, 0.35);
+  background: linear-gradient(145deg, #1463ba 0%, #0f4f94 100%);
+  color: #fff;
+  padding: 0.56rem 0.82rem;
+  cursor: pointer;
+}
+
+.list-box {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+  color: #d7e9fa;
+}
+
+.list-box li {
+  margin-bottom: 0.38rem;
+}
+
+.ranking-list {
+  display: grid;
+  gap: 0.48rem;
+  margin-top: 0.6rem;
+}
+
+.ranking-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  border: 1px solid rgba(157, 190, 225, 0.18);
+  border-radius: 9px;
+  padding: 0.55rem 0.62rem;
+  background: rgba(8, 21, 34, 0.72);
+}
+
+.ranking-row span {
+  color: #dbe9f9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ranking-row strong {
+  color: #8dd8b3;
+  flex-shrink: 0;
+}
+
+.helper {
+  margin: 0.4rem 0 0.8rem;
+  color: #a7c6e4;
+  font-size: 0.92rem;
+}
+
+.notebook-chart-card .recharts-legend-wrapper {
+  color: #dbe9f9;
+}
+
+.model-table-wrap {
+  margin-top: 0.7rem;
+  overflow-x: auto;
+  border: 1px solid rgba(157, 190, 225, 0.18);
+  border-radius: 10px;
+  background: rgba(8, 21, 34, 0.72);
+}
+
+.model-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+}
+
+.model-table th,
+.model-table td {
+  padding: 0.6rem 0.7rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(157, 190, 225, 0.12);
+}
+
+.model-table th {
+  position: sticky;
+  top: 0;
+  background: rgba(10, 29, 47, 0.98);
+  color: #c9e2f9;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.model-table td {
+  color: #e6f1fb;
+}
+
+.model-table tbody tr:nth-child(even) td {
+  background: rgba(15, 41, 64, 0.42);
+}
+
+.model-table td.ok {
+  color: #65d18e;
+  font-weight: 700;
+}
+
+.example-row {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.example-row select,
+.example-row button,
+.prediction-form input,
+.prediction-form select,
+.prediction-form button {
+  border-radius: 10px;
+  border: 1px solid rgba(157, 190, 225, 0.35);
+  background: rgba(8, 21, 34, 0.88);
+  color: #ebf4fc;
+  font-size: 0.93rem;
+}
+
+.example-row select {
+  flex: 1;
+  padding: 0.52rem 0.62rem;
+}
+
+.example-row button {
+  padding: 0.52rem 0.8rem;
+  cursor: pointer;
+  background: linear-gradient(145deg, #1d72d8 0%, #0f5cab 100%);
+  font-weight: 600;
+}
+
+.active-example {
+  margin: 0.65rem 0 0.8rem;
+  color: #d4e7fa;
+  font-size: 0.88rem;
+}
+
+.prediction-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.58rem;
+}
+
+.prediction-form label {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.86rem;
+  color: #bad5f0;
+}
+
+.prediction-form input,
+.prediction-form select {
+  padding: 0.5rem 0.6rem;
+}
+
+.prediction-form button {
+  margin-top: 0.2rem;
+  padding: 0.62rem 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(145deg, #2e8b57 0%, #1f6f44 100%);
+}
+
+.prediction-form .simulate-btn {
+  background: linear-gradient(145deg, #7a4fbe 0%, #6136a9 100%);
+}
+
+.prediction-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+.result-kpis {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 0.6rem;
+}
+
+.result-kpis div {
+  border: 1px solid rgba(167, 199, 229, 0.2);
+  border-radius: 10px;
+  padding: 0.65rem;
+  background: rgba(9, 31, 50, 0.62);
+}
+
+.result-kpis span {
+  display: block;
+  color: #9ec2e6;
+  font-size: 0.8rem;
+}
+
+.result-kpis strong {
+  display: block;
+  margin-top: 0.23rem;
+  font-size: 1.02rem;
+  color: #eff7ff;
+}
+
+.result-kpis .ok {
+  color: #65d18e;
+}
+
+.result-kpis .risk {
+  color: #ff9b9b;
+}
+
+.interpretation-box,
+.alerts-box,
+.empty-state {
+  margin-top: 0.72rem;
+  border: 1px solid rgba(172, 202, 232, 0.2);
+  border-radius: 10px;
+  padding: 0.75rem;
+  background: rgba(11, 34, 54, 0.58);
+}
+
+.interpretation-box h3,
+.alerts-box h3 {
+  margin: 0 0 0.45rem;
+  font-size: 0.94rem;
+}
+
+.interpretation-box p,
+.alerts-box p,
+.empty-state p {
+  margin: 0;
+  color: #d8e9fa;
+  line-height: 1.45;
+}
+
+.alerts-box ul,
+.empty-state ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.15rem;
+  color: #ffccae;
+}
+
+.simulation-box ul {
+  color: #bce4ff;
+}
+
+.error-message {
+  margin: 0.5rem 0;
+  border: 1px solid rgba(255, 153, 153, 0.46);
+  border-radius: 8px;
+  padding: 0.55rem;
+  background: rgba(102, 24, 31, 0.55);
+  color: #ffd6d6;
+}
+
+.loading-message {
+  margin-top: 0.8rem;
+  border: 1px solid rgba(157, 190, 225, 0.2);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  background: rgba(11, 34, 54, 0.66);
+  color: #d6e7f7;
+}
+
+@media (max-width: 1150px) {
+  .panel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .econometria-page {
+    padding: 0.95rem;
+  }
+
+  .hero-card h1 {
+    font-size: 1.55rem;
+  }
+
+  .example-row {
+    flex-direction: column;
+  }
+
+  .filters-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-kpis {
+    grid-template-columns: 1fr;
+  }
+}

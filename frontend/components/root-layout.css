@@ -1,0 +1,106 @@
+/* ========================================
+   ROOT LAYOUT STYLES
+   ======================================== */
+
+.root-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f1e2e 0%, #1a2a3a 50%, #1a2a3a 100%);
+}
+
+.main-content {
+  margin-left: 320px;
+  flex: 1;
+  width: calc(100% - 320px);
+  padding: 0;
+  overflow-y: auto;
+  background: linear-gradient(135deg, #0f1e2e 0%, #1a2a3a 50%, #1a2a3a 100%);
+  transition: margin-left 0.24s ease, width 0.24s ease;
+}
+
+.root-layout.sidebar-collapsed .main-content {
+  margin-left: 124px;
+  width: calc(100% - 124px);
+}
+
+.root-layout.sidebar-resizing .main-content {
+  transition: none;
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
+.mobile-menu-btn img {
+  width: 16px;
+  height: 16px;
+  display: block;
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+}
+
+.mobile-menu-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.main-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: rgba(41, 128, 185, 0.5);
+  border-radius: 5px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(41, 128, 185, 0.8);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .root-layout {
+    flex-direction: column;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding-top: 3rem;
+  }
+
+  .root-layout.sidebar-collapsed .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    z-index: 995;
+    border: 1px solid rgba(41, 128, 185, 0.45);
+    background: rgba(15, 30, 46, 0.92);
+    color: #aed6f1;
+    border-radius: 10px;
+    padding: 0.5rem;
+  }
+}

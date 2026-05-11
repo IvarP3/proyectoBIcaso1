@@ -1,0 +1,428 @@
+.dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f1c2e 0%, #16293a 100%);
+  color: #e0e6ed;
+  padding: 2rem;
+}
+
+.dashboard.loading,
+.dashboard.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #aed6f1;
+}
+
+.dashboard-header {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid rgba(41, 128, 185, 0.3);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: end;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #aed6f1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-header p {
+  margin: 0;
+  color: #7f8c8d;
+  font-size: 0.95rem;
+}
+
+.horizon-control {
+  min-width: 260px;
+  background: rgba(15, 28, 46, 0.6);
+  border: 1px solid rgba(41, 128, 185, 0.35);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+}
+
+.horizon-control label {
+  display: block;
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  margin-bottom: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.horizon-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.horizon-input-row input[type='range'] {
+  flex: 1;
+  accent-color: #1e8449;
+}
+
+.horizon-input-row span {
+  font-weight: 700;
+  color: #aed6f1;
+  min-width: 60px;
+  text-align: right;
+}
+
+/* KPI Section */
+.kpi-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.kpi-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(27, 79, 114, 0.1) 0%, rgba(41, 128, 185, 0.1) 100%);
+  border: 1px solid rgba(41, 128, 185, 0.3);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(41, 128, 185, 0.6);
+  background: linear-gradient(135deg, rgba(27, 79, 114, 0.2) 0%, rgba(41, 128, 185, 0.2) 100%);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.kpi-indicator {
+  width: 4px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.kpi-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.kpi-label {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+  /* Prediction Section */
+  .prediction-section {
+    background: linear-gradient(135deg, rgba(27, 79, 114, 0.15) 0%, rgba(30, 132, 73, 0.1) 100%);
+    border: 2px solid rgba(30, 132, 73, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(30, 132, 73, 0.2);
+  }
+
+  .prediction-section h2 {
+    color: #1E8449;
+    font-size: 1.3rem;
+    margin-top: 0;
+  }
+.kpi-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0.5rem 0 0 0;
+  color: #aed6f1;
+}
+
+.kpi-subtext {
+  font-size: 0.75rem;
+  color: #5d6d7b;
+  margin: 0.25rem 0 0 0;
+}
+
+/* Chart Section */
+.chart-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(27, 79, 114, 0.08) 0%, rgba(41, 128, 185, 0.08) 100%);
+  border: 1px solid rgba(41, 128, 185, 0.2);
+  border-radius: 12px;
+}
+
+.chart-section h2 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.4rem;
+  color: #aed6f1;
+  font-weight: 600;
+}
+
+.chart-container {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.custom-tooltip {
+  background: rgba(27, 79, 114, 0.95);
+  border: 1px solid rgba(41, 128, 185, 0.5);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.custom-tooltip p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #aed6f1;
+}
+
+.custom-tooltip .label {
+  font-weight: 600;
+  color: #2980b9;
+  margin-bottom: 0.5rem;
+}
+
+/* Forecast Table */
+.forecast-table {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(41, 128, 185, 0.2);
+}
+
+.forecast-table table,
+.clientes-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.forecast-table thead tr,
+.clientes-table thead tr {
+  background: rgba(27, 79, 114, 0.3);
+  border-bottom: 2px solid rgba(41, 128, 185, 0.4);
+}
+
+.forecast-table th,
+.clientes-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #aed6f1;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.forecast-table td,
+.clientes-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(41, 128, 185, 0.1);
+  color: #e0e6ed;
+  font-size: 0.95rem;
+}
+
+.forecast-table tbody tr:hover,
+.clientes-table tbody tr:hover {
+  background: rgba(41, 128, 185, 0.1);
+}
+
+.action-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.action-alto {
+  background: rgba(30, 132, 73, 0.2);
+  color: #52be80;
+  border: 1px solid rgba(30, 132, 73, 0.4);
+}
+
+.action-medio {
+  background: rgba(212, 172, 13, 0.2);
+  color: #f9e79f;
+  border: 1px solid rgba(212, 172, 13, 0.4);
+}
+
+.action-bajo {
+  background: rgba(192, 57, 43, 0.2);
+  color: #f5b7b1;
+  border: 1px solid rgba(192, 57, 43, 0.4);
+}
+
+/* Clientes Table */
+.clientes-table {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(41, 128, 185, 0.2);
+}
+
+/* Prescriptive Section */
+.prescriptive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.prescriptive-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid;
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.prescriptive-card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.prescriptive-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.prescriptive-alto {
+  border-left-color: #1e8449;
+  background: linear-gradient(135deg, rgba(30, 132, 73, 0.1) 0%, rgba(30, 132, 73, 0.05) 100%);
+}
+
+.prescriptive-alto h3,
+.prescriptive-alto p {
+  color: #52be80;
+}
+
+.prescriptive-medio {
+  border-left-color: #d4ac0d;
+  background: linear-gradient(135deg, rgba(212, 172, 13, 0.1) 0%, rgba(212, 172, 13, 0.05) 100%);
+}
+
+.prescriptive-medio h3,
+.prescriptive-medio p {
+  color: #f9e79f;
+}
+
+.prescriptive-bajo {
+  border-left-color: #c0392b;
+  background: linear-gradient(135deg, rgba(192, 57, 43, 0.1) 0%, rgba(192, 57, 43, 0.05) 100%);
+}
+
+.prescriptive-bajo h3,
+.prescriptive-bajo p {
+  color: #f5b7b1;
+}
+
+/* Model Info Section */
+.model-info {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(27, 79, 114, 0.08) 0%, rgba(41, 128, 185, 0.08) 100%);
+  border: 1px solid rgba(41, 128, 185, 0.2);
+  border-radius: 12px;
+}
+
+.model-info h2 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.2rem;
+  color: #aed6f1;
+  font-weight: 600;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.info-grid article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  border-left: 3px solid #2980b9;
+}
+
+.info-grid .label {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-grid .value {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #aed6f1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .horizon-control {
+    width: 100%;
+  }
+
+  .dashboard {
+    padding: 1rem;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .kpi-section {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-section {
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .prescriptive-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .forecast-table table,
+  .clientes-table table {
+    font-size: 0.85rem;
+  }
+
+  .forecast-table th,
+  .clientes-table th,
+  .forecast-table td,
+  .clientes-table td {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .kpi-card {
+    flex-direction: column;
+  }
+
+  .kpi-indicator {
+    width: 2px;
+    height: 2px;
+  }
+}

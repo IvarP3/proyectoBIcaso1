@@ -1,0 +1,13 @@
+# Backend-specific ignores
+.venv/
+__pycache__/
+*.py[cod]
+.env
+*.sqlite3
+*.db
+logs/
+coverage.xml
+
+# Ignore model artifacts by default (keep a .gitkeep if needed)
+app/modules/**/artifacts/models/*
+!app/modules/**/artifacts/models/.gitkeep

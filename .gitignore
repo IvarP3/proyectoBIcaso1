@@ -1,0 +1,60 @@
+# Root .gitignore for Transfreezer Insight Suite
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+venv/
+env/
+.env.*
+*.sqlite3
+*.db
+
+# Node / Next
+node_modules/
+frontend/node_modules/
+.next/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Models/artifacts (do not commit large trained model files)
+**/artifacts/models/*
+!**/artifacts/models/.gitkeep
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets and keys
+secrets.json
+*.pem
+*.key
+
+.env.local
+# Local files
+local_settings.py
+.next
+node_modules
+dist
+build
+# backend/.env intentionally allowed for commit
+__pycache__
+*.pyc
+.pytest_cache
+.venv
+venv
+backend/app/modules/**/artifacts/models/*
+!backend/app/modules/**/artifacts/models/.gitkeep
